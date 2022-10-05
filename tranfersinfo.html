@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer Infor</title>
+    <link rel="stylesheet" href="style2.css">
+    <!-- CSS only -->
+    <!-- <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous"
+  /> -->
+  <!-- JavaScript Bundle with Popper -->
+  <!-- <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"
+  ></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer" -->
+  />
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/node_modules/fontawesome-4.7/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/node_modules/sweetalert2/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+<body>
+    <div class="container-sm">
+        <div class="card-title">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h1>Transfer money Information</h1>
+                </div>
+                <div class="col-sm-6">
+                    <a href="homepage.html" class="btn btn-outline-light">
+                        <i class="fa fa-list" aria-hidden="true"></i>
+                        <span>List Customer</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <form id="frmTransfer" method="post" novalidate="novalidate">
+            <fieldset class="row g-3">
+                <div class="form-group row">
+                    <div class="mb-3 col-md-3">
+                        <label class="col-sm-12 col-form-label">Sender ID</label>
+                        <div class="col-sm-12">
+                            <input type="text" class="form-control" readonly="" id="senderId" name="senderId" value="1115">
+                        </div>
+                    </div>
+                    <div class="mb-3 col-md-3">
+                        <label class="col-sm-12 col-form-label">Sender Name</label>
+                        <div class="col-sm-12">
+                            <input type="text" class="form-control" readonly="" id="senderName" name="senderName" value="Rose Beach">
+                        </div>
+                    </div>
+                    <div class="mb-3 col-md-3">
+                        <label class="col-sm-12 col-form-label">Email</label>
+                        <div class="col-sm-12">
+                            <input type="email" class="form-control" readonly="" id="email" name="email" value="bikygige@mailinator.com">
+                        </div>
+                    </div>
+                    <div class="mb-3 col-md-3">
+                        <label class="col-sm-12 col-form-label">Sender balance</label>
+                        <div class="col-sm-12">
+                            <input type="text" class="form-control num-space" readonly="" id="balance" name="balance" value="0">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row mb-4">
+                    <div class="mb-3 col-md-3">
+                        <label for="recipient_id" class="col-sm-12 col-form-label">Recipient Name</label>
+                        <div class="col-sm-12">
+                            <select id="recipient_id" class="form-select" name="recipientId">
+                                <option value="1105">(1105) Danielle Mendoza</option>
+                                <option value="1145">(1145) Shoshana Bruce</option>
+                                <option value="1155">(1155) Akeem Walter</option>
+                                <option value="1165">(1165) Akeem Walter</option>
+                                <option value="1175">(1175) Amaya Baker</option>
+                                <option value="1185">(1185) Christian Butler</option>
+                                <option value="1195">(1195) Edan Roach</option>
+                                <option value="1215">(1215) Garth Walker</option>
+                                <option value="1235">(1235) Jenna Patterson</option>
+                                <option value="1245">(1245) Reuben Cobb</option>
+                                <option value="1255">(1255) Maite Sargent</option>
+                                <option value="1265">(1265) Vanna Cruz</option>
+                                <option value="1275">(1275) Ashton Meyers</option>
+                                <option value="1305">(1305) Thor Ball</option>
+                                <option value="1315">(1315) Rama Wheeler</option>
+                                <option value="1335">(1335) Quon Hayden</option>
+                                <option value="1345">(1345) Sinh đẹp</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mb-3 col-md-3">
+                        <label class="col-sm-12 col-form-label">Transfer Amount ($)</label>
+                        <div class="col-sm-12">
+                            <input type="text" id="transferAmount" class="form-control num-space" name="transferAmount" value="">
+                        </div>
+                    </div>
+                    <div class="mb-3 col-md-3">
+                        <label class="col-sm-12 col-form-label">Fees (%)</label>
+                        <div class="col-sm-12">
+                            <input type="text" class="form-control num-space" value="10" readonly="">
+                        </div>
+                    </div>
+                    <div class="mb-3 col-md-3">
+                        <label class="col-sm-12 col-form-label">Total amount of transaction ($)</label>
+                        <div class="col-sm-12">
+                            <input type="text" class="form-control num-space" readonly="" id="transactionAmount" name="transactionAmount" value="">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="mb-3 col-md-12">
+                        <div class="col-sm-4">
+                            <button type="submit" class="btn btn-outline-primary">
+                                <i class="fa fa-exchange" aria-hidden="true"></i>
+                                 Transfer
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
